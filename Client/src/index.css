@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'ArabicText';
+    src: url('./fonts/ArabicText.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ArabicLogo';
+    src: url('./fonts/ArabicLogo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.Homebtn {
+    @apply bg-primary text-white px-4 py-2 rounded-lg font-semibold text-lg  hover:bg-dark hover:text-white transform hover:-translate-y-1 transition duration-300;
+  }
+
+.navs{
+    @apply p-4 hover:text-dark hover:-translate-y-0.5 transition;  
+}
