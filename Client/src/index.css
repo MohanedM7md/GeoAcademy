@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root{
+    background-color: #FFF3E0;
+    height: 100%;
+}
+#root{
+    height:100lvh;
+}
 @font-face {
     font-family: 'ArabicText';
     src: url('./fonts/ArabicText.ttf') format('truetype');
@@ -20,4 +26,8 @@
 
 .navs{
     @apply p-4 hover:text-dark hover:-translate-y-0.5 transition;  
+}
+
+.inp{
+    @apply rounded-md bg-[#fde1b1] focus:outline-primary transition p-2 h-5/6 text-black;
 }

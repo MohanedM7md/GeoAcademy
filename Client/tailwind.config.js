@@ -13,6 +13,7 @@ export default {
         secondary: '#8B4513',  // Saddle Brown (Light Theme)
         accent: '#FFA500',     // Classic Orange (Light Theme)
         light: '#FFF3E0',      // Cream (Light Background)
+        textsColor: '#8b795b',      // Cream (Light Background)
         dark: '#4E342E',       // Dark Brown (Light Text)
         // Dark Mode Colors
         darkPrimary: '#5D4037',   // Dark Cinnamon

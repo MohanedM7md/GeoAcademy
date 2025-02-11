@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { Link } from "react-router";
 
 export default function Home() {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => setIsOpen(!isOpen);
-
     return (
         <div className="min-h-screen bg-light ">
 
@@ -28,13 +24,15 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="flex flex-row-reverse gap-x-12"> 
-                        <button className="Homebtn">
-                            إنشاء حساب جديد
-                        </button>
-                        <Link to="./pages/login">
-                         <button className="Homebtn">
-                            تسجيل دخول
-                        </button>
+                        <Link to="./signup">
+                            <button className="Homebtn">
+                                إنشاء حساب جديد
+                            </button>
+                        </Link>
+                        <Link to="./login">
+                            <button className="Homebtn">
+                                تسجيل دخول
+                            </button>
                         </Link>
                     </div>
                 </div>
