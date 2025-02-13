@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet,Link } from "react-router";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons'; // Import the icon
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,21 +9,33 @@ export default function NavBar() {
 
     return (<>
         {/* Navbar */}
-        <nav className={`border-b border-primary text-primary  w-full z-10 ${isOpen?'min-h-screen fixed bg-light':''}` }>
-            <button onClick={toggleMenu} className="md:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-            <div className="container md:mx-auto flex md:justify-between justify-center">
-                <div className="hidden md:block text-lg font-bold font-ArabicLogo ml-3">جيوغرافيك اكاديمي</div>
-                <div className={`${isOpen ? 'flex' : 'hidden'}   md:flex flex-col items-center  md:flex-row p-0`}>
-                    <Link to="/courses" className="navs">السناتر و المواعيد</Link>
-                    <Link to="./login" className="navs">تسجيل الدخول</Link>
-                    <Link to="./signup" className="navs">للحجز و انشاء حساب</Link>
-                    <Link to="/" className="navs">الرئيسية</Link>
-                </div>
+        <nav 
+        className={`border-b border-primary text-primary w-full z-10 
+            ${isOpen ? 'fixed bg-light min-h-screen translate-y-0' : '-translate-y-full'}  
+            md:static md:translate-y-0 transition-transform duration-500 ease-in-out`}>
+        
+        {/* Menu Icon */}
+        <FontAwesomeIcon 
+            onClick={toggleMenu} 
+            className={`md:hidden text-3xl cursor-pointer transform translate-y-full translate-x-2 pt-2 ${isOpen ? 'pt-0':''}`}
+            icon="fa-solid fa-bars" 
+        />
+
+        {/* Navbar Content */}
+        <div className="container md:mx-auto flex md:justify-between justify-center">
+            <div className="hidden md:block text-lg font-bold font-ArabicLogo ml-3">جيوغرافيك اكاديمي</div>
+            
+            {/* Mobile Links */}
+            <div 
+            className={`${isOpen ? 'flex' : 'hidden'} 
+            md:flex flex-col md:flex-row items-center transition-transform duration-500 ease-in-out`}>
+            
+            <Link to="/courses" className="navs">السناتر و المواعيد</Link>
+            <Link to="/login" className="navs">تسجيل الدخول</Link>
+            <Link to="/signup" className="navs">للحجز و انشاء حساب</Link>
+            <Link to="/" className="navs">الرئيسية</Link>
             </div>
+        </div>
         </nav>
         <Outlet />
         </>

@@ -4,6 +4,9 @@ export default {
   darkMode: 'class',  // Enable class-based dark mode
   theme: {
     extend: {
+      translate: {
+        '160': '40rem',
+      },
       fontFamily: {
         ArabicText: ['ArabicText', 'sans-serif'],
         ArabicLogo: ['ArabicLogo', 'sans-serif']

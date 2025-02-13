@@ -19,7 +19,7 @@ function Login() {
                             <input dir="rtl" className="inp   w-full" type="password" />
                         </label>
                         <div className="col-span-2 flex justify-center">
-                        <button className =" bg-primary rounded-md text-2xl font-extrabold text-white w-5/12 h-12" type="submit">
+                        <button className ="transition border-2 border-primary hover:border-primary hover:-translate-y-1 hover:bg-transparent hover:text-primary bg-primary rounded-md text-2xl font-extrabold text-white w-5/12 h-12" type="submit">
                         تسجيل الدخول
                         </button>
                         </div>

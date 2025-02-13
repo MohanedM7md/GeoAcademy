@@ -21,8 +21,11 @@
     font-style: normal;
 }
 .Homebtn {
-    @apply bg-primary text-white px-4 py-2 rounded-lg font-semibold text-lg  hover:bg-dark hover:text-white transform hover:-translate-y-1 transition duration-300;
-  }
+    @apply bg-white text-[#b1581983] px-4 py-2 rounded-lg font-semibold text-lg
+        hover:bg-transparent border-white 
+        hover:text-white transform hover:-translate-y-1 
+        border-2 transition-transform duration-200;
+}
 
 .navs{
     @apply p-4 hover:text-dark hover:-translate-y-0.5 transition;  
@@ -30,4 +33,8 @@
 
 .inp{
     @apply rounded-md bg-[#fde1b1] focus:outline-primary transition p-2 h-5/6 text-black;
+}
+
+.SideNaves{
+    @apply p-2 hover:bg-dark hover:-translate-y-0.5 transition;  
 }
