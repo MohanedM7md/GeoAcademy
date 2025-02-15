@@ -1,6 +1,6 @@
 # Overview
 
-Darkclass is a comprehensive platform designed for teachers to efficiently manage their private lessons.
+GeoAcademy is a comprehensive platform designed for teachers to efficiently manage their private lessons.
 The platform offers features such as dashboards, quizzes, assignments, and video lectures.
 Teachers can oversee their schedules, upload materials, and manage student submissions.
 Admin users have additional privileges to manage centers, users, and content.
