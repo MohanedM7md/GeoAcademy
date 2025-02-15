@@ -8,10 +8,12 @@ const connection = msql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME
-});
+}).promise()    ;
 
 connection.connect((err) => {
     if (err) {
+        console.log(`userName: ${process.env.DB_USER} passsword: ${process.env.DB_PASS} DBname: ${process.env.DB_NAME}`)
+     
         console.log('Error connecting to Db');
         return;
     }
